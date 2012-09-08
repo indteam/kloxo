@@ -11,13 +11,13 @@ enabled=1
 gpgcheck=0
 
 [kloxo-testing-local-noarch]
-name=kloxo-release-local-noarch
+name=kloxo-testing-local-noarch
 baseurl=file:///home/rpms/testing/centos$releasever/noarch/
 enabled=0
 gpgcheck=0
 
 [kloxo-testing-local-arch]
-name=kloxo-release-local-$basearch
+name=kloxo-testing-local-$basearch
 baseurl=file:///home/rpms/testing/centos$releasever/$basearch/
 enabled=0
 gpgcheck=0
