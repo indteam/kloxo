@@ -64,13 +64,13 @@ enabled=1
 gpgcheck=0
 
 [kloxo-testing-local-noarch]
-name=kloxo-release-local-noarch
+name=kloxo-testing-local-noarch
 baseurl=file:///home/rpms/testing/centos$RELEASEVER/noarch/
 enabled=0
 gpgcheck=0
 
 [kloxo-testing-local-arch]
-name=kloxo-release-local-\$basearch
+name=kloxo-testing-local-\$basearch
 baseurl=file:///home/rpms/testing/centos$RELEASEVER/\$basearch/
 enabled=0
 gpgcheck=0" > /etc/yum.repos.d/kloxo-local.repo
