@@ -10,8 +10,6 @@ if [ "$1" == "--help" ] ; then
 	echo " ---------------------------------------------------------------------------"
 	echo "   --createrepo - also creating '/etc/yum.repos.d/kloxo-public.repo' file"
 	echo
-	echo " * Local repo inside /home/rpms and running this script will be"
-	echo "      setup repodata inside /home/rpms"
 	exit;
 fi
 
@@ -19,7 +17,7 @@ echo
 echo "- For help, type '$0 --help'"
 
 if [ "$#" == 0 ] ; then
-	echo "- No argument supplied. Defaulting to creating local-repo without .repo file"
+	echo "- No argument supplied. Defaulting to creating public-repo without .repo file"
 fi
 
 rpm --quiet -q createrepo -q
@@ -48,30 +46,30 @@ if [ "$1" == "--with-repofile" ] ; then
 
 RELEASEVER=$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release))
 
-echo "- Creating local-repo inside '/home/rpms' "
-echo "     with kloxo-local.repo inside '/etc/yum.repos.d'"
+echo "- Creating public-repo inside '/home/rpms' "
+echo "     with kloxo-public.repo inside '/etc/yum.repos.d'"
 
-echo "[kloxo-release-local-noarch]
-name=kloxo-release-local-noarch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms/release/centos$RELEASEVER/noarch/
+echo "[kloxo-release-public-noarch]
+name=kloxo-release-public-noarch
+baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-release/centos$RELEASEVER/noarch/
 enabled=1
 gpgcheck=0
 
-[kloxo-release-local-arch]
-name=kloxo-release-local-\$basearch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms/release/centos$RELEASEVER/\$basearch/
+[kloxo-release-public-arch]
+name=kloxo-release-public-\$basearch
+baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-release/centos$RELEASEVER/\$basearch/
 enabled=1
 gpgcheck=0
 
-[kloxo-testing-local-noarch]
-name=kloxo-testing-local-noarch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms/testing/centos$RELEASEVER/noarch/
+[kloxo-testing-public-noarch]
+name=kloxo-testing-public-noarch
+baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-esting/centos$RELEASEVER/noarch/
 enabled=0
 gpgcheck=0
 
-[kloxo-testing-local-arch]
-name=kloxo-testing-local-\$basearch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms/testing/centos$RELEASEVER/\$basearch/
+[kloxo-testing-public-arch]
+name=kloxo-testing-public-\$basearch
+baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-testing/centos$RELEASEVER/\$basearch/
 enabled=0
 gpgcheck=0" > /etc/yum.repos.d/kloxo-public.repo
 
