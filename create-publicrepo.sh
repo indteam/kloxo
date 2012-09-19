@@ -40,6 +40,8 @@ for item in ${list[*]}
 do
 	createrepo -q /home/rpms/release/centos5/$item
 	createrepo -q /home/rpms/release/centos6/$item
+	createrepo -q /home/rpms/testing/centos5/$item
+	createrepo -q /home/rpms/testing/centos6/$item
 done
 
 if [ "$1" == "--with-repofile" ] ; then
