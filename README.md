@@ -4,6 +4,6 @@ Rpm packages for Kloxo-MR (Kloxo fork by Mustafa Ramadhan). Also possible to be 
 # How to use this repo
 
     cd /etc/yum.repos.d
-	wget https://github.com/mustafaramadhan/kloxo/raw/rpms-release/create-kloxocustomrepo.sh
+	wget https://github.com/mustafaramadhan/kloxo/raw/rpms-testing/create-kloxocustomrepo.sh
 	sh ./create-kloxocustomrepo.sh
 	yum clean all

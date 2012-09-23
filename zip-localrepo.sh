@@ -1,4 +1,4 @@
 #!/bin/sh
 
-zip -r9yD /home/kloxo-rpms-testing.zip ./
+zip -r9yD /home/kloxo-rpms-release.zip ./
 

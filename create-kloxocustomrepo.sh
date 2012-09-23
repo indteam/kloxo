@@ -15,7 +15,7 @@ enabled=1
 gpgcheck=0
 
 [kloxo-release-arch]
-name=kloxo-release-$basearch
+name=kloxo-release-\$basearch
 baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-release/centos$RELEASEVER/\$basearch/
 enabled=1
 gpgcheck=0
