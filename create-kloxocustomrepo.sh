@@ -16,7 +16,7 @@ gpgcheck=0
 
 [kloxo-release-arch]
 name=kloxo-release-$basearch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-release/centos$RELEASEVER/$basearch/
+baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-release/centos$RELEASEVER/\$basearch/
 enabled=1
 gpgcheck=0
 
@@ -27,16 +27,16 @@ enabled=0
 gpgcheck=0
 
 [kloxo-testing-arch]
-name=kloxo-testing-$basearch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-testing/centos$RELEASEVER/$basearch/
+name=kloxo-testing-\$basearch
+baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-testing/centos$RELEASEVER/\$basearch/
 enabled=0
 gpgcheck=0
 
 # ==================================
 
 [kloxo-centalt]
-name=kloxo-centalt - $basearch
-baseurl=http://centos.alt.ru/repository/centos/$RELEASEVER/$basearch/
+name=kloxo-centalt - \$basearch
+baseurl=http://centos.alt.ru/repository/centos/$RELEASEVER/\$basearch/
 enabled=1
 gpgcheck=0
 exclude=openssh*
@@ -44,17 +44,17 @@ exclude=openssh*
 # ==================================
 
 [kloxo-ius]
-name=kloxo - IUS Community Packages for Enterprise Linux $RELEASEVER - $basearch
-baseurl=http://dl.iuscommunity.org/pub/ius/stable/Redhat/$RELEASEVER/$basearch
-mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el$RELEASEVER&arch=$basearch
+name=kloxo - IUS Community Packages for Enterprise Linux $RELEASEVER - \$basearch
+baseurl=http://dl.iuscommunity.org/pub/ius/stable/Redhat/$RELEASEVER/\$basearch
+mirrorlist=http://dmirr.iuscommunity.org/mirrorlist/?repo=ius-el$RELEASEVER&arch=\$basearch
 enabled=1
 gpgcheck=0
 
 # ==================================
 
 [kloxo-epel]
-name=kloxo - Extra Packages for Enterprise Linux $RELEASEVER - $basearch
-baseurl=http://download.fedoraproject.org/pub/epel/$RELEASEVER/$basearch
-mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=epel-$RELEASEVER&arch=$basearch
+name=kloxo - Extra Packages for Enterprise Linux $RELEASEVER - \$basearch
+baseurl=http://download.fedoraproject.org/pub/epel/$RELEASEVER/\$basearch
+mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=epel-$RELEASEVER&arch=\$basearch
 enabled=1
 gpgcheck=0" > /etc/yum.repos.d/kloxo-custom.repo
