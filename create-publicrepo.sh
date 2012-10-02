@@ -53,25 +53,25 @@ echo "     with kloxo-public.repo inside '/etc/yum.repos.d'"
 
 echo "[kloxo-release-public-noarch]
 name=kloxo-release-public-noarch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-release/centos$RELEASEVER/noarch/
+baseurl=http://raw.github.com/mustafaramadhan/kloxo/rpms-release/centos$RELEASEVER/noarch/
 enabled=1
 gpgcheck=0
 
 [kloxo-release-public-arch]
 name=kloxo-release-public-\$basearch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-release/centos$RELEASEVER/\$basearch/
+baseurl=http://raw.github.com/mustafaramadhan/kloxo/rpms-release/centos$RELEASEVER/\$basearch/
 enabled=1
 gpgcheck=0
 
 [kloxo-testing-public-noarch]
 name=kloxo-testing-public-noarch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-esting/centos$RELEASEVER/noarch/
+baseurl=http://raw.github.com/mustafaramadhan/kloxo/rpms-testing/centos$RELEASEVER/noarch/
 enabled=0
 gpgcheck=0
 
 [kloxo-testing-public-arch]
 name=kloxo-testing-public-\$basearch
-baseurl=https://github.com/mustafaramadhan/kloxo/raw/rpms-testing/centos$RELEASEVER/\$basearch/
+baseurl=http://raw.github.com/mustafaramadhan/kloxo/rpms-testing/centos$RELEASEVER/\$basearch/
 enabled=0
 gpgcheck=0" > /etc/yum.repos.d/kloxo-public.repo
 
